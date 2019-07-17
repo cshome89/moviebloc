@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <title>icon</title>
+  <g>
+    <path d="M40,23H8a1,1,0,0,0,0,2H40a1,1,0,0,0,0-2Z" fill="#fff"/>
+    <path d="M8,14H40a1,1,0,0,0,0-2H8a1,1,0,0,0,0,2Z" fill="#fff"/>
+    <path d="M40,34H8a1,1,0,0,0,0,2H40a1,1,0,0,0,0-2Z" fill="#fff"/>
+  </g>
+</svg>

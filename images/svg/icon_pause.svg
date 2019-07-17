@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <title>icon</title>
+  <g>
+    <path d="M20,6H9A1,1,0,0,0,8,7V41a1,1,0,0,0,1,1H20a1,1,0,0,0,1-1V7A1,1,0,0,0,20,6ZM19,40H10V8h9Z" fill="#fff"/>
+    <path d="M39,6H28a1,1,0,0,0-1,1V41a1,1,0,0,0,1,1H39a1,1,0,0,0,1-1V7A1,1,0,0,0,39,6ZM38,40H29V8h9Z" fill="#fff"/>
+  </g>
+</svg>

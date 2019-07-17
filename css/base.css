@@ -1,0 +1,160 @@
+@charset "utf-8";
+
+/*
+ ★ Coding By DumiCode
+ ★ homepage: http://www.dumicode.com
+*/
+
+/* Reset */
+* {
+    box-sizing:border-box;
+    outline:none;
+}
+
+*:before, *:before, input, select, textarea {
+    box-sizing:border-box;
+    outline:none;
+}
+
+html {
+    -webkit-text-size-adjust:100%;
+    -ms-text-size-adjust:100%;
+
+}
+
+body, h1, h2, h3, h4, h5, h6,
+div, p, address,
+ul, ol, li, dl, dt, dd,
+table, th, td,
+form, fieldset, legend,
+hr {
+    margin:0;
+    padding:0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight:400;
+}
+
+ul, ol, li {
+    list-style:none;
+}
+
+table {
+    margin:0;
+    padding:0;
+    border-spacing:0;
+    border-collapse:collapse;
+    border:0;
+}
+
+img, fieldset {
+    border:0;
+    vertical-align:top;
+}
+
+address, em {
+    font-style:normal;
+}
+
+input, select, button, textarea {
+    border:none;
+    color:#fff;
+    font-size:16px;
+    font-weight:400;
+    font-family:'Noto Sans KR', 'Abril Fatface', 'Nanum Myeongjo', 'helvetica', 'roboto', 'sans-serif';
+    vertical-align:top;
+    outline:none;
+}
+
+/* Base */
+body {
+    color:#fff;
+    font-size:12px;
+    line-height:12px;
+    font-weight:400;
+    font-family:'Noto Sans KR', 'Abril Fatface', 'Nanum Myeongjo', 'helvetica', 'roboto', 'sans-serif';
+    text-align:left;
+}
+
+hr {
+    display:none;
+}
+
+a {
+    color:#fff;
+    text-decoration:none;
+}
+
+a:focus, a:hover, a:active {}
+
+label,
+input[type="button"], input[type="submit"], input[type="image"],
+button {
+    cursor:pointer;
+}
+
+input[type="text"], input[type="tel"], input[type="number"], input[type="password"], input[type="button"], input[type="submit"], input[type="image"], textarea {
+    appearance:none;
+    -webkit-appearance:none;
+}
+
+textarea {
+    overflow-y:auto;
+}
+
+fieldset {
+    display:block;
+}
+
+strong {
+    font-weight:700;
+}
+
+legend,
+caption,
+.alt_text {
+    display:none;
+}
+
+
+/*html5*/
+article, aside, dialog, footer, header, section, nav, figure, menu {
+    display:block;
+}
+
+input[type="text"] {width:100%; height:48px; padding:0 20px; border:1px solid #3e3e3e; border-radius:3px; background:#0e0e0e; color:#fff; }
+input[type="text"]:focus {border:1px solid #8f67ff; }
+
+input[type="password"] {width:100%; height:48px; padding:0 20px; border:1px solid #3e3e3e; border-radius:3px; background:#0e0e0e; color:#fff; }
+input[type="password"]:focus {border:1px solid #8f67ff; }
+
+textarea {width:100%; height:120px; padding:15px; border:1px solid #3e3e3e; border-radius:3px; background:#0e0e0e; color:#fff; font-size:14px; line-height:20px; resize:none;}
+textarea:focus {border:1px solid #8f67ff; }
+
+input[type="text"]::-webkit-input-placeholder { color:#3e3e3e; }
+input[type="text"]:-moz-placeholder { color:#3e3e3e; }
+input[type="text"]::-moz-placeholder { color:#3e3e3e; }
+input[type="text"]:-ms-input-placeholder { color:#3e3e3e; }
+
+input[type="password"]::-webkit-input-placeholder { color:#3e3e3e; }
+input[type="password"]:-moz-placeholder { color:#3e3e3e; }
+input[type="password"]::-moz-placeholder { color:#3e3e3e; }
+input[type="password"]:-ms-input-placeholder { color:#3e3e3e; }
+
+textarea::-webkit-input-placeholder { color:#3e3e3e; }
+textarea:-moz-placeholder { color:#3e3e3e; }
+textarea::-moz-placeholder { color:#3e3e3e; }
+textarea:-ms-input-placeholder { color:#3e3e3e; }
+
+select::-ms-expand { display:none; }
+select {
+    display:inline-block;
+
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    border:1px solid #3e3e3e;
+    color:#fff;
+}
+select:focus {border:1px solid #8f67ff; }

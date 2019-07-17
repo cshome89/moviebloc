@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <title>icon</title>
+  <g>
+    <path d="M41,10H7a3,3,0,0,0-3,3V35a3,3,0,0,0,3,3H41a3,3,0,0,0,3-3V13A3,3,0,0,0,41,10Zm1,25a1,1,0,0,1-1,1H7a1,1,0,0,1-1-1V13a1,1,0,0,1,1-1H41a1,1,0,0,1,1,1Z" fill="#fff"/>
+    <rect x="12" y="30" width="16" height="2" fill="#fff"/>
+    <rect x="32" y="30" width="4" height="2" fill="#fff"/>
+    <rect x="12" y="24" width="8" height="2" fill="#fff"/>
+    <rect x="24" y="24" width="12" height="2" fill="#fff"/>
+  </g>
+</svg>
