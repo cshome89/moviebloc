@@ -4,19 +4,19 @@
 		<div class="menu">
 			<ul class="gnb">
 				<li>
-					<router-link to="/">{{propsdata.language[propsdata.lang].gnb_home}}</router-link>
+					<router-link to="/">{{this.$parent.global.language[this.$parent.global.lang].gnb_home}}</router-link>
 				</li>
 				<li>
-					<a @click="memberLogin">{{propsdata.language[propsdata.lang].gnb_theater}}</a>
+					<a href="#">{{this.$parent.global.language[this.$parent.global.lang].gnb_theater}}</a>
 				</li>
 				<li>
-					<router-link to="/genre">{{propsdata.language[propsdata.lang].gnb_genre}}</router-link>
+					<router-link to="/genre">{{this.$parent.global.language[this.$parent.global.lang].gnb_genre}}</router-link>
 				</li>
 				<li>
-					<router-link to="/search">{{propsdata.language[propsdata.lang].gnb_search}}</router-link>
+					<router-link to="/search">{{this.$parent.global.language[this.$parent.global.lang].gnb_search}}</router-link>
 				</li>
 			</ul>
-			<template v-if="propsdata.isLogin">
+			<template v-if="this.$parent.global.isLogin">
 				<div class="account">
                     <div class="alarm_wrap">
                         <a href="#" class="alarm new"></a>
@@ -27,7 +27,7 @@
                                 <li><a href="#">환영합니다! 무비블록의 회원이 되셨습니다.</a></li>
                             </ul>
                             <select class="sel_black sel_small">
-                                <option value="">{{propsdata.language[propsdata.lang].dot_tab_act}}</option>
+                                <option value="">{{this.$parent.global.language[this.$parent.global.lang].dot_tab_act}}</option>
                             </select>
                         </div>
                     </div>
@@ -38,19 +38,19 @@
                         </a>
                         <ul class="dropdown_my">
                             <li>
-                            	<a href="#">{{propsdata.language[propsdata.lang].gnb_dotbloc}}</a>
+                            	<a href="#">{{this.$parent.global.language[this.$parent.global.lang].gnb_dotbloc}}</a>
                             </li>
                             <li>
-                            	<a href="#">{{propsdata.language[propsdata.lang].gnb_watchlater}}</a>
+                            	<router-link to="/watchlist">{{this.$parent.global.language[this.$parent.global.lang].gnb_watchlater}}</router-link>
                             </li>
                             <li>
-                            	<a href="#">{{propsdata.language[propsdata.lang].gnb_history}}</a>
+                            	<a href="#">{{this.$parent.global.language[this.$parent.global.lang].gnb_history}}</a>
                             </li>
                             <li>
-                            	<a href="#">{{propsdata.language[propsdata.lang].gnb_purchases}}</a>
+                            	<a href="#">{{this.$parent.global.language[this.$parent.global.lang].gnb_purchases}}</a>
                             </li>
                             <li>
-                            	<a href="javascript:void(0);" @click="memberLogOut">{{propsdata.language[propsdata.lang].gnb_signout}}</a>
+                            	<a href="javascript:void(0);" @click="memberLogOut">{{this.$parent.global.language[this.$parent.global.lang].gnb_signout}}</a>
                             </li>
                         </ul>
                     </nav>
@@ -58,19 +58,16 @@
 			</template>
 			<template v-else>
 				<div class="account">
-                    <div class="alarm_wrap">
-                        <a href="#" class="alarm"></a>
-                    </div>
                     <nav class="my">
-                        <a href="#" class="sign">
-                        	{{propsdata.language[propsdata.lang].gnb_signin}}/{{propsdata.language[propsdata.lang].gnb_signup}}
+                        <a @click="showPopup('login')" class="sign">
+                        	{{this.$parent.global.language[this.$parent.global.lang].gnb_signin}}/{{this.$parent.global.language[this.$parent.global.lang].gnb_signup}}
                         </a>
                     </nav>
                 </div>
 			</template>
 			<select class="lang sel_small sel_lightgray" v-on:change="langChange">
-				<option value="en" :selected="propsdata.lang == 'en'">영어</option>
-				<option value="ko" :selected="propsdata.lang == 'ko'">한국어</option>
+				<option value="en" :selected="this.$parent.global.lang == 'en'">영어</option>
+				<option value="ko" :selected="this.$parent.global.lang == 'ko'">한국어</option>
 			</select>
 		</div>
 		<a href="#" class="btn_menu">Menu</a>
@@ -83,18 +80,19 @@
 		created(){
 			console.log(this.$route);
 		},
-		props : ["propsdata"],
 		methods : {
 			langChange(e){
 				var idx = e.target.options.selectedIndex;
-				this._props.propsdata.lang = e.target.options[idx].value;
-				this.$emit("langChange",this._props.propsdata.lang);
+				this.$emit("langChange",e.target.options[idx].value);
 			},
 			memberLogin(){
 				this.$emit("memberLogin");
 			},
 			memberLogOut(){
 				this.$emit("memberLogOut");
+			},
+			showPopup( type ){
+				this.$emit("showPopup" , type);
 			}
 		}
 	}

@@ -8,5 +8,9 @@ export default {
 	getData( method , params ){
 		method = this.path.common + method;
 		return axios.get(method,params);
+	},
+	getSearchData( method , params ){
+		method = this.path.search + method;
+		return axios.get(method,params);
 	}
 }

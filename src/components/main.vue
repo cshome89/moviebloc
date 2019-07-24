@@ -1,16 +1,14 @@
-/* swiper 태그 추가해야함  */
-
 <template>
 	<div>
-		<section class="main_top_banner" style="background-image:url('images/img_main_banner02.jpg')">
+		<section class="main_top_banner" v-bind:style="{'background-image':'url('+ mainRes.mtImg[0] +')'}">
             <div class="video_info">
-                <h2 class="txt_name">유년기의 끝</h2>
-                <p class="txt_info">Violet Seo / 드라마 / 97분 / <img src="images/svg/icon_star_a.svg" alt="★">74%</p>
-                <p class="txt_desc">계절이 지나가는 하늘에는 가을로 가득 차 있습니다. 나는 아무 걱정도 없이 가을 속의 별들을 다 헤일 듯합니다... 가슴 속에 하나 둘 새겨지는 별을 이제 다 못 헤는 것은 쉬이 아침이 오는 까닭이요, 내일 밤이 남은 까닭이요, 아직 나의 청춘이 다하지 않은 까닭입니다.</p>
+                <h2 class="txt_name">{{mainRes.mt.chd}}</h2>
+                <p class="txt_info"> {{mainRes.mt.nim}} / {{this.$parent.global.genre[this.$parent.global.lang][mainRes.mt.gne]}} / {{mainRes.mt.ptm}} / <img src="images/svg/icon_star_a.svg" alt="★">{{mainRes.mt.gag}}% </p>
+                <p class="txt_desc">{{mainRes.mt.cbd}}</p>
                 <div class="btn_bar">
                     <a href="#" class="btn btn_video btn_small btn_play">$0.8</a>
-                    <a href="#" class="btn btn_video btn_small btn_watch_add">찜하기</a>
-                    <a href="#" class="btn btn_video btn_small btn_detail">자세히 보기</a>
+                    <a href="#" class="btn btn_video btn_small btn_watch_add">{{this.$parent.global.language[this.$parent.global.lang].co_watchlater}}</a>
+                    <a href="#" class="btn btn_video btn_small btn_detail" v-on:click="linkClick('detail')">{{this.$parent.global.language[this.$parent.global.lang].co_detail}}</a>
                 </div>
             </div>
         </section>
@@ -19,41 +17,9 @@
                 <p class="txt_type">New Arrival Movie with English Subtitle</p>
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide figure_wrap">
-                            <a href="#" class="img img_video"><img src="images/img_swiper_260_146_01.jpg" alt=""></a>
-                            <p class="txt_name">Lorem ipsum dolor</p>
-                        </div>
-                        <div class="swiper-slide figure_wrap">
-                            <a href="#" class="img img_video"><img src="images/img_swiper_260_146_01.jpg" alt=""></a>
-                            <p class="txt_name">Mauris augue augue, interdum vitae</p>
-                        </div>
-                        <div class="swiper-slide figure_wrap">
-                            <a href="#" class="img img_video"><img src="images/img_swiper_260_146_01.jpg" alt=""></a>
-                            <p class="txt_name">Aliquam erat volutpat</p>
-                        </div>
-                        <div class="swiper-slide figure_wrap">
-                            <a href="#" class="img img_video"><img src="images/img_swiper_260_146_01.jpg" alt=""></a>
-                            <p class="txt_name">Phasellus eleifend malesuada</p>
-                        </div>
-                        <div class="swiper-slide figure_wrap">
-                            <a href="#" class="img img_video"><img src="images/img_swiper_260_146_01.jpg" alt=""></a>
-                            <p class="txt_name">Aliquam feugiat</p>
-                        </div>
-                        <div class="swiper-slide figure_wrap">
-                            <a href="#" class="img img_video"><img src="images/img_swiper_260_146_01.jpg" alt=""></a>
-                            <p class="txt_name">Duis eleifend convallis libero eu blandit</p>
-                        </div>
-                        <div class="swiper-slide figure_wrap">
-                            <a href="#" class="img img_video"><img src="images/img_swiper_260_146_01.jpg" alt=""></a>
-                            <p class="txt_name">Duis eleifend convallis libero eu blandit</p>
-                        </div>
-                        <div class="swiper-slide figure_wrap">
-                            <a href="#" class="img img_video"><img src="images/img_swiper_260_146_01.jpg" alt=""></a>
-                            <p class="txt_name">Duis eleifend convallis libero eu blandit</p>
-                        </div>
-                        <div class="swiper-slide figure_wrap">
-                            <a href="#" class="img img_video"><img src="images/img_swiper_260_146_01.jpg" alt=""></a>
-                            <p class="txt_name">Duis eleifend convallis libero eu blandit</p>
+                        <div class="swiper-slide figure_wrap" v-for="item in mainRes.cp">
+                            <a href="#" class="img img_video"><img v-bind:src="item.cin" alt=""></a>
+                            <p class="txt_name">{{item.chd}}</p>
                         </div>
                     </div>
                 </div>
@@ -115,41 +81,9 @@
                 <p class="txt_type">MovieBloc Collection</p>
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide figure_wrap">
-                            <a href="#" class="img img_video"><img src="images/img_swiper_260_146_02.jpg" alt=""></a>
-                            <p class="txt_name">Lorem ipsum dolor</p>
-                        </div>
-                        <div class="swiper-slide figure_wrap">
-                            <a href="#" class="img img_video"><img src="images/img_swiper_260_146_02.jpg" alt=""></a>
-                            <p class="txt_name">Lorem ipsum dolor</p>
-                        </div>
-                        <div class="swiper-slide figure_wrap">
-                            <a href="#" class="img img_video"><img src="images/img_swiper_260_146_02.jpg" alt=""></a>
-                            <p class="txt_name">Lorem ipsum dolor</p>
-                        </div>
-                        <div class="swiper-slide figure_wrap">
-                            <a href="#" class="img img_video"><img src="images/img_swiper_260_146_02.jpg" alt=""></a>
-                            <p class="txt_name">Lorem ipsum dolor</p>
-                        </div>
-                        <div class="swiper-slide figure_wrap">
-                            <a href="#" class="img img_video"><img src="images/img_swiper_260_146_02.jpg" alt=""></a>
-                            <p class="txt_name">Lorem ipsum dolor</p>
-                        </div>
-                        <div class="swiper-slide figure_wrap">
-                            <a href="#" class="img img_video"><img src="images/img_swiper_260_146_02.jpg" alt=""></a>
-                            <p class="txt_name">Lorem ipsum dolor</p>
-                        </div>
-                        <div class="swiper-slide figure_wrap">
-                            <a href="#" class="img img_video"><img src="images/img_swiper_260_146_02.jpg" alt=""></a>
-                            <p class="txt_name">Lorem ipsum dolor</p>
-                        </div>
-                        <div class="swiper-slide figure_wrap">
-                            <a href="#" class="img img_video"><img src="images/img_swiper_260_146_02.jpg" alt=""></a>
-                            <p class="txt_name">Lorem ipsum dolor</p>
-                        </div>
-                        <div class="swiper-slide figure_wrap">
-                            <a href="#" class="img img_video"><img src="images/img_swiper_260_146_02.jpg" alt=""></a>
-                            <p class="txt_name">Lorem ipsum dolor</p>
+                        <div class="swiper-slide figure_wrap" v-for="item in mainRes.rc">
+                            <a href="#" class="img img_video"><img v-bind:src="item.cin" alt=""></a>
+                            <p class="txt_name">{{item.chd}}</p>
                         </div>
                     </div>
                 </div>
@@ -163,41 +97,9 @@
                 <p class="txt_type">You may also like this</p>
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide figure_wrap">
-                            <a href="#" class="img img_video"><img src="images/img_swiper_260_146_03.jpg" alt=""></a>
-                            <p class="txt_name">Lorem ipsum dolor</p>
-                        </div>
-                        <div class="swiper-slide figure_wrap">
-                            <a href="#" class="img img_video"><img src="images/img_swiper_260_146_03.jpg" alt=""></a>
-                            <p class="txt_name">Mauris augue augue, interdum vitae</p>
-                        </div>
-                        <div class="swiper-slide figure_wrap">
-                            <a href="#" class="img img_video"><img src="images/img_swiper_260_146_03.jpg" alt=""></a>
-                            <p class="txt_name">Lorem ipsum dolor</p>
-                        </div>
-                        <div class="swiper-slide figure_wrap">
-                            <a href="#" class="img img_video"><img src="images/img_swiper_260_146_03.jpg" alt=""></a>
-                            <p class="txt_name">Lorem ipsum dolor</p>
-                        </div>
-                        <div class="swiper-slide figure_wrap">
-                            <a href="#" class="img img_video"><img src="images/img_swiper_260_146_03.jpg" alt=""></a>
-                            <p class="txt_name">Lorem ipsum dolor</p>
-                        </div>
-                        <div class="swiper-slide figure_wrap">
-                            <a href="#" class="img img_video"><img src="images/img_swiper_260_146_03.jpg" alt=""></a>
-                            <p class="txt_name">Lorem ipsum dolor</p>
-                        </div>
-                        <div class="swiper-slide figure_wrap">
-                            <a href="#" class="img img_video"><img src="images/img_swiper_260_146_03.jpg" alt=""></a>
-                            <p class="txt_name">Lorem ipsum dolor</p>
-                        </div>
-                        <div class="swiper-slide figure_wrap">
-                            <a href="#" class="img img_video"><img src="images/img_swiper_260_146_03.jpg" alt=""></a>
-                            <p class="txt_name">Lorem ipsum dolor</p>
-                        </div>
-                        <div class="swiper-slide figure_wrap">
-                            <a href="#" class="img img_video"><img src="images/img_swiper_260_146_03.jpg" alt=""></a>
-                            <p class="txt_name">Lorem ipsum dolor</p>
+                        <div class="swiper-slide figure_wrap" v-for="item in mainRes.pr">
+                            <a href="#" class="img img_video"><img v-bind:src="item.cin" alt=""></a>
+                            <p class="txt_name">{{item.chd}}</p>
                         </div>
                     </div>
                 </div>
@@ -325,9 +227,77 @@
 </template>
 
 <script>
-
 	export default{
-
+		created(){
+			let vue = this;
+			this.$parent.$axiosModule.getData("get_main_list",{
+					"sm_lang"	: this.$parent.global.lang,
+					"ss_lang"	: this.$parent.global.lang,
+					"sd_lang"	: this.$parent.global.lang,
+					"mx_cnt"	: 10
+				}).then(function(res){
+				vue._data.mainRes.mt = res.data.d.mt;
+				vue._data.mainRes.cp = res.data.d.cp;
+				vue._data.mainRes.rc = res.data.d.rc;
+				vue._data.mainRes.pr = res.data.d.pr;
+				for(var i=0;i<res.data.d.mt.cin.length;i++){
+					var j = i + 1;
+					vue._data.mainRes.mtImg[i] = res.data.d.mt.cin[i][j];
+				}
+				
+			});
+		},
+		mounted(){
+            var swp_main_01 = new Swiper ('.swp_main_01 .swiper-container', {
+                slidesPerView:'auto',
+                nextButton: '.swp_main_01 .swiper-button-next',
+                prevButton: '.swp_main_01 .swiper-button-prev',
+            });
+            var swp_main_02 = new Swiper ('.swp_main_02 .swiper-container', {
+                slidesPerView:'auto',
+                nextButton: '.swp_main_02 .swiper-button-next',
+                prevButton: '.swp_main_02 .swiper-button-prev',
+            });
+            var swp_main_03 = new Swiper ('.swp_main_03 .swiper-container', {
+                slidesPerView:'auto',
+                nextButton: '.swp_main_03 .swiper-button-next',
+                prevButton: '.swp_main_03 .swiper-button-prev',
+            });
+            var swp_main_04 = new Swiper ('.swp_main_04 .swiper-container', {
+                slidesPerView:'auto',
+                nextButton: '.swp_main_04 .swiper-button-next',
+                prevButton: '.swp_main_04 .swiper-button-prev',
+            });
+            var swp_main_05 = new Swiper ('.swp_main_05 .swiper-container', {
+                slidesPerView:'auto',
+                nextButton: '.swp_main_05 .swiper-button-next',
+                prevButton: '.swp_main_05 .swiper-button-prev',
+            });
+            var swp_main_06 = new Swiper ('.swp_main_06 .swiper-container', {
+                slidesPerView:'auto',
+                freeMode: true,
+                nextButton: '.swp_main_06 .swiper-button-next',
+                prevButton: '.swp_main_06 .swiper-button-prev',
+            });
+		},
+		data(){
+			return {
+				mainRes:{
+					mt: {},
+					cp: {},
+					rc: {},
+					pr: {},
+					mtImg: {}
+				}
+			}
+		},
+		methods: {
+			linkClick: function(link){
+				if(link == "detail"){
+					this.$router.push({ path: "/detail?no="+this._data.mainRes.mt.cid});
+				}
+			}
+		}
 	}
 
 </script>

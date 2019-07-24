@@ -211,10 +211,10 @@ select.max {display:block; width:100%;}
 .txt_sub_cont + .txt_sub_cont {margin-top:25px;}
 .sub_photo + .tit_sub_cont {margin-bottom:50px;}
 
-.kr .video_info .txt_name {font-family:'NanumMyeongjo', sans-serif;}
-.kr .video_info .txt_info {font-family:'NanumMyeongjo', sans-serif;}
-.kr .video_info .txt_desc {font-family:'Noto Sans KR', sans-serif;}
-.kr .tit_sub_cont {font-family:'NanumMyeongjo', sans-serif;}
+.ko .video_info .txt_name {font-family:'NanumMyeongjo', sans-serif;}
+.ko .video_info .txt_info {font-family:'NanumMyeongjo', sans-serif;}
+.ko .video_info .txt_desc {font-family:'Noto Sans KR', sans-serif;}
+.ko .tit_sub_cont {font-family:'NanumMyeongjo', sans-serif;}
 
 .video_scroll_wrap {padding:0 0 0 80px;}
 .genre_video {margin:20px 0 0;}
@@ -438,7 +438,7 @@ textarea + .t_cnt {display:block; color:#acacac; font-size:16px; line-height:32p
 .account_wrap .logo {display:block; width:128px; margin:0 auto 60px;}
 .account_wrap .account {width:580px; margin:0 auto; padding:40px 80px; background:#1e1e1e; border-radius:5px; box-shadow:0 0 10px #000;}
 .account_wrap .account .tit_account {font-family:"Abril Fatface"; font-size:36px; line-height:80px;}
-.account_wrap .account .tit_account.kr {font-family:"NanumMyeongjo";}
+.account_wrap .account .tit_account.ko {font-family:"NanumMyeongjo";}
 .account_wrap .account .forgot {color:#8f67ff; font-size:16px; line-height:40px;}
 .account_wrap .account .txt_signup {margin-top:80px; color:#fff; font-size:16px; line-height:40px;}
 .account_wrap .account .txt_signup a {color:#8f67ff;}
